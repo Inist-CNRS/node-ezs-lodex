@@ -43,7 +43,7 @@
         "ezs": "6.0.0",
         "from": "^0.1.7",
         "istanbul": "^0.4.5",
-        "mocha": "^3.5.3"
+        "mocha": "5.2.0"
     },
     "peerDependencies": {
         "ezs": "*",

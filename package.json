@@ -39,7 +39,7 @@
         "eslint": "^3.19.0",
         "eslint-config-airbnb": "^14.1.0",
         "eslint-plugin-import": "^2.2.0",
-        "expect": "23.1.0",
+        "expect": "23.6.0",
         "ezs": "6.0.0",
         "from": "^0.1.7",
         "istanbul": "^0.4.5",

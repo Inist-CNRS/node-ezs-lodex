@@ -32,7 +32,7 @@
     },
     "devDependencies": {
         "babel-cli": "6.26.0",
-        "babel-eslint": "7.2.3",
+        "babel-eslint": "10.0.1",
         "babel-preset-env": "1.7.0",
         "babel-preset-stage-3": "6.24.1",
         "documentation": "8.1.2",

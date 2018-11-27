@@ -46,7 +46,7 @@
         "mocha": "^3.5.3"
     },
     "peerDependencies": {
-        "ezs": "^5.4.2",
+        "ezs": "*",
         "ezs-basics": "^3.6.2"
     }
 }

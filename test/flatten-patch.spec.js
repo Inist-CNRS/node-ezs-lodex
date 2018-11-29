@@ -1,7 +1,8 @@
 import from from 'from';
 import ezs, { use } from 'ezs';
+import statements from '../src';
 
-use(require('../src'));
+use(statements);
 
 describe('flattenPatch', () => {
     it('should return when joined arrays', (done) => {

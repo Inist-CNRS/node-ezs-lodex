@@ -6,7 +6,12 @@ import statements from '../src';
 ezs.use(statements);
 
 describe('convertToAtom', () => {
+    const fields = [
+        { overview: 1, name: 'title' },
+        { overview: 2, name: 'description' },
+    ];
     let atomFeed;
+
     beforeEach(() => {
         atomFeed = new Feed({
             title: 'title',
@@ -40,17 +45,12 @@ describe('convertToAtom', () => {
     });
 
     it('should return the correct feed from one resource', (done) => {
-        const fields = [
-            { overview: 1, name: 'title' },
-            { overview: 2, name: 'description' },
-        ];
         from([{
             uri: 'http://uri',
             title: 'Title',
             description: 'Description.',
         }])
             .pipe(ezs('convertToAtom', { fields, config: {}, atomFeed }))
-            .pipe(ezs('debug'))
             .pipe(ezs((input) => {
                 try {
                     const lines = input.split('\n');
@@ -70,6 +70,29 @@ describe('convertToAtom', () => {
                     expect(lines[14]).toBe('        <summary type="html"><![CDATA[Description.]]></summary>');
                     expect(lines[15]).toBe('    </entry>');
                     expect(lines[16]).toBe('</feed>');
+                    done();
+                } catch (e) {
+                    done(e);
+                }
+            }))
+            .on('error', done);
+    });
+
+    it('should return the correct feed from two resources', (done) => {
+        from([{
+            uri: 'http://uri/1',
+            title: 'Title',
+            description: 'Description.',
+        }, {
+            uri: 'http://uri/2',
+            title: 'Title',
+            description: 'Is it present?',
+        }])
+            .pipe(ezs('convertToAtom', { fields, config: {}, atomFeed }))
+            .pipe(ezs((input) => {
+                try {
+                    const lines = input.split('\n');
+                    expect(lines.length).toBe(25);
                     done();
                 } catch (e) {
                     done(e);

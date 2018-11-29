@@ -2,7 +2,7 @@ import from from 'from';
 import ezs, { use } from 'ezs';
 import testOne from './testOne';
 
-use(require('../lib'));
+use(require('../src'));
 
 describe('objects2columns', () => {
     it('should return when columns', (done) => {

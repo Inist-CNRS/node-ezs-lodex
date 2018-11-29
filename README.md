@@ -21,8 +21,15 @@ process.stdin
 
 ### Table of Contents
 
+-   [convertJsonLdToNQuads](#convertjsonldtonquads)
 -   [flattenPatch](#flattenpatch)
 -   [objects2columns](#objects2columns)
+
+## convertJsonLdToNQuads
+
+Take a JSON-LD object and transform it into NQuads triples.
+
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## flattenPatch
 

@@ -5,7 +5,7 @@
  * @name convertToAtom
  * @param {Object}  [fields={}]     LODEX model
  * @param {Feed}    [atomFeed={}]   A feed of resources, see [feed](https://github.com/jpmonette/feed)
- * @param {Object}  [config={}]     LODEX configuration
+ * @param {Object}  [config={}]     LODEX configuration (with `perPage`)
  * @returns {String}
  */
 export default function convertToAtom(data, feed) {

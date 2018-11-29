@@ -42,7 +42,7 @@ model.
 
 -   `fields` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** LODEX model (optional, default `{}`)
 -   `atomFeed` **Feed** A feed of resources, see [feed](https://github.com/jpmonette/feed) (optional, default `{}`)
--   `config` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** LODEX configuration (optional, default `{}`)
+-   `config` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** LODEX configuration (with `perPage`) (optional, default `{}`)
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 

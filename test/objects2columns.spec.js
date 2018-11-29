@@ -1,9 +1,8 @@
-const expect = require('expect');
-const from = require('from');
-const ezs = require('ezs');
-const testOne = require('./testOne');
+import from from 'from';
+import ezs, { use } from 'ezs';
+import testOne from './testOne';
 
-ezs.use(require('../lib'));
+use(require('../lib'));
 
 describe('objects2columns', () => {
     it('should return when columns', (done) => {

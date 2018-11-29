@@ -19,6 +19,9 @@ describe('flattenPatch', () => {
                 'b/2': 3,
                 'b/3': 4,
             },
+            {
+                d: [1, 2, 3],
+            },
         ])
             .pipe(ezs('flattenPatch'))
             .on('data', (chunk) => {
@@ -26,11 +29,12 @@ describe('flattenPatch', () => {
                 res.push(chunk);
             })
             .on('end', () => {
-                expect(res.length).toBe(2);
+                expect(res.length).toBe(3);
                 expect(res[0].a).toBe(1);
                 expect(res[0].b).toBe('2;3');
                 expect(res[0].c).toBe(4);
                 expect(res[1].b).toBe('1;2;3;4');
+                expect(res[2].d).toBe('1;2;3');
                 done();
             });
     });

@@ -18,7 +18,9 @@
         "url": "https://github.com/Inist-CNRS/ezs-lodex/issues"
     },
     "homepage": "https://github.com/Inist-CNRS/ezs-lodex#readme",
-    "dependencies": {},
+    "dependencies": {
+        "jsonld": "1.1.0"
+    },
     "main": "./lib/index.js",
     "scripts": {
         "test": "jest",

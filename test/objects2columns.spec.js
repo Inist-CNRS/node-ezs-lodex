@@ -22,4 +22,20 @@ describe('objects2columns', () => {
             done,
         );
     });
+
+    it('should return when columns non object', (done) => {
+        const stream = from([{
+            truc: 'anything else',
+            bidule: 1,
+        }]).pipe(ezs('objects2columns'));
+        testOne(
+            stream,
+            (output) => {
+                expect(output);
+                expect(output.truc).toBe('anything else');
+                expect(output.bidule).toBe(1);
+            },
+            done,
+        );
+    });
 });

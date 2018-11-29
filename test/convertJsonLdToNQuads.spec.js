@@ -45,4 +45,56 @@ describe('convertJSonLdToNquads', () => {
         );
     },
     8000);
+
+    it.skip('should cut the feed when error', (done) => {
+        // see https://json-ld.org/playground/ for the Person example
+        try {
+            const stream = from([
+                {
+                    '@context': 'http://schema.org/',
+                    '@graph': [
+                        {
+                            id: 1,
+                            type: 'Person',
+                            jobTitle: 'Professor',
+                            name: 'Jane Doe',
+                            telephone: '(425) 123-4567',
+                            url: 'http://www.janedoe.com',
+                        },
+                    ],
+                },
+            ])
+                .pipe(ezs('convertJsonLdToNQuads'))
+                .pipe(ezs((data) => {
+                    try {
+                        expect(data).toBeDefined();
+                        done(new Error('Should not work'));
+                    } catch (e) {
+                        expect(e).toBeDefined();
+                        done();
+                    }
+                }))
+                .on('end', () => {
+                    done(new Error('Should not work'));
+                });
+        } catch (error) {
+            return done();
+        }
+
+        // stream.pipe(ezs.catch((error) => {
+        //     expect(error).toBeDefined();
+        //     done();
+        // }));
+
+        // stream
+        //     .on('error', (err) => {
+        //         expect(err).toBeDefined();
+        //         done();
+        //     })
+        //     .on('data', (data) => {
+        //         expect(data);
+        //         done(new Error('Should not work'));
+        //     });
+    },
+    8000);
 });

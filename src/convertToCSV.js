@@ -11,19 +11,21 @@ export const removeContributions = (doc, contributions) => {
     return omit(doc, fieldsToIgnore);
 };
 
-export const getLastVersionFactory = defaultDocument => ({ uri, versions, contributions = [] }) => {
-    const lastVersion = versions[versions.length - 1];
-    const lastVersionWithoutContribution = removeContributions(
-        lastVersion,
-        contributions,
-    );
+export const getLastVersionFactory = defaultDocument =>
+    // eslint-disable-next-line implicit-arrow-linebreak
+    function getLastVersion({ uri, versions, contributions = [] }) {
+        const lastVersion = versions[versions.length - 1];
+        const lastVersionWithoutContribution = removeContributions(
+            lastVersion,
+            contributions,
+        );
 
-    this.queue({
-        ...defaultDocument,
-        ...lastVersionWithoutContribution,
-        uri,
-    });
-};
+        this.queue({
+            ...defaultDocument,
+            ...lastVersionWithoutContribution,
+            uri,
+        });
+    };
 
 export const getCsvFieldFactory = getCharacteristicByName => ({
     cover,

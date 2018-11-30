@@ -40,7 +40,7 @@ describe('convertToSitemap', () => {
             publicationDate: Date.now(),
         }])
             .pipe(ezs('convertToSitemap'))
-            .pipe(ezs('debug'))
+            // .pipe(ezs('debug'))
             .on('data', (chunk) => {
                 expect(typeof chunk).toBe('string');
                 str += chunk;

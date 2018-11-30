@@ -5,6 +5,7 @@ import convertToAtom from './convertToAtom';
 import convertToExtendedJsonLd from './convertToExtendedJsonLd';
 import convertToJson from './convertToJson';
 import convertToSitemap from './convertToSitemap';
+import extractIstexQuery from './extractIstexQuery';
 
 export default {
     flattenPatch,
@@ -14,6 +15,7 @@ export default {
     convertToExtendedJsonLd,
     convertToJson,
     convertToSitemap,
+    extractIstexQuery,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

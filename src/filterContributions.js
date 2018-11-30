@@ -1,6 +1,6 @@
 import omit from 'lodash.omit';
 
-// import { VALIDATED } from '../../common/propositionStatus';
+// import { VALIDATED } from '../../common/propositionStatus'; // IN LODEX
 const VALIDATED = 'VALIDATED';
 
 export default function filterContributions(data, feed) {

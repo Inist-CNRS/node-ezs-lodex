@@ -7,6 +7,7 @@ import convertToJson from './convertToJson';
 import convertToSitemap from './convertToSitemap';
 import extractIstexQuery from './extractIstexQuery';
 import filterContributions from './filterContributions';
+import filterVersions from './filterVersions';
 
 export default {
     flattenPatch,
@@ -18,6 +19,7 @@ export default {
     convertToSitemap,
     extractIstexQuery,
     filterContributions,
+    filterVersions,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

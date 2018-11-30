@@ -22,7 +22,8 @@
         "jsonld": "1.1.0",
         "lodash.get": "4.4.2",
         "lodash.omit": "4.5.0",
-        "valid-url": "1.0.9"
+        "valid-url": "1.0.9",
+        "xml-writer": "1.7.0"
     },
     "main": "./lib/index.js",
     "scripts": {

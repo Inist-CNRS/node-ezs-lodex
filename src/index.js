@@ -4,6 +4,7 @@ import convertJsonLdToNQuads from './convertJsonLdToNQuads';
 import convertToAtom from './convertToAtom';
 import convertToExtendedJsonLd from './convertToExtendedJsonLd';
 import convertToJson from './convertToJson';
+import convertToSitemap from './convertToSitemap';
 
 export default {
     flattenPatch,
@@ -12,6 +13,7 @@ export default {
     convertToAtom,
     convertToExtendedJsonLd,
     convertToJson,
+    convertToSitemap,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

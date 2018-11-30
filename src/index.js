@@ -8,6 +8,8 @@ import convertToSitemap from './convertToSitemap';
 import extractIstexQuery from './extractIstexQuery';
 import filterContributions from './filterContributions';
 import filterVersions from './filterVersions';
+import linkDataset from './linkDataset';
+import useFieldNames from './useFieldNames';
 
 export default {
     flattenPatch,
@@ -20,6 +22,8 @@ export default {
     extractIstexQuery,
     filterContributions,
     filterVersions,
+    linkDataset,
+    useFieldNames,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

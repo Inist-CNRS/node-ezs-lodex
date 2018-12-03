@@ -10,6 +10,7 @@ import filterContributions from './filterContributions';
 import filterVersions from './filterVersions';
 import linkDataset from './linkDataset';
 import useFieldNames from './useFieldNames';
+import JSONLDCompacter from './JSONLDCompacter';
 
 export default {
     flattenPatch,
@@ -24,6 +25,7 @@ export default {
     filterVersions,
     linkDataset,
     useFieldNames,
+    JSONLDCompacter,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

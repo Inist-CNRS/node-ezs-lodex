@@ -21,7 +21,7 @@ const mergeClasses = (output, field, data, host) => {
         '@context': {
             ...output['@context'],
             [propertyName]: fieldContext,
-            label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+            label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
         },
     };
 };

@@ -39,7 +39,7 @@ describe('JSONLDObject / mergeCompose', () => {
                 component1: { '@id': 'http://component1.scheme' },
                 component2: { '@id': 'http://component2.scheme' },
                 composed: { '@id': 'http://composed.scheme' },
-                label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+                label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
             },
             composed: [
                 {
@@ -89,7 +89,7 @@ describe('JSONLDObject / mergeCompose', () => {
         expect(res).toEqual({
             '@context': {
                 composed: { '@id': 'http://composed.scheme' },
-                label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+                label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
             },
             composed: [null, null],
         });
@@ -126,7 +126,7 @@ describe('JSONLDObject / mergeCompose', () => {
             '@context': {
                 component2: { '@id': 'http://component2.scheme' },
                 composed: { '@id': 'http://composed.scheme' },
-                label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+                label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
             },
             composed: [
                 null,
@@ -172,7 +172,7 @@ describe('JSONLDObject / mergeCompose', () => {
                 component1: { '@id': 'http://component1.scheme' },
                 component2: { '@id': 'http://component2.scheme' },
                 composed: { '@id': 'http://composed.scheme' },
-                label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+                label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
             },
             composed: [
                 {
@@ -224,7 +224,7 @@ describe('JSONLDObject / mergeCompose', () => {
                 component1: { '@id': 'http://component1.scheme' },
                 component2: { '@id': 'http://component2.scheme' },
                 composed: { '@id': 'http://composed.scheme' },
-                label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+                label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
             },
             composed: [
                 {

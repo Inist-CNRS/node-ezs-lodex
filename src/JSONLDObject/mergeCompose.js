@@ -53,7 +53,7 @@ export default function mergeCompose(output, field, data, fields) {
             ...output['@context'],
             ...composeFieldsContext,
             [propertyName]: fieldContext,
-            label: { '@id': 'https://www.w3.org/2000/01/rdf-schema#label' },
+            label: { '@id': 'http://www.w3.org/2000/01/rdf-schema#label' },
         },
     };
 

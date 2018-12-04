@@ -63,7 +63,7 @@ describe('JSONLDObject / mergeClasses', () => {
         expect(output).toEqual({
             '@context': {
                 label: {
-                    '@id': 'https://www.w3.org/2000/01/rdf-schema#label',
+                    '@id': 'http://www.w3.org/2000/01/rdf-schema#label',
                 },
                 uri: {
                     '@id': 'http://scheme',
@@ -90,7 +90,7 @@ describe('JSONLDObject / mergeClasses', () => {
         expect(output).toEqual({
             '@context': {
                 label: {
-                    '@id': 'https://www.w3.org/2000/01/rdf-schema#label',
+                    '@id': 'http://www.w3.org/2000/01/rdf-schema#label',
                 },
                 uri: {
                     '@id': 'http://scheme',
@@ -114,7 +114,7 @@ describe('JSONLDObject / mergeClasses', () => {
         expect(output).toEqual({
             '@context': {
                 label: {
-                    '@id': 'https://www.w3.org/2000/01/rdf-schema#label',
+                    '@id': 'http://www.w3.org/2000/01/rdf-schema#label',
                 },
                 uri: {
                     '@id': 'http://scheme',

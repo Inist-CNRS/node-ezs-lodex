@@ -12,6 +12,7 @@ import linkDataset from './linkDataset';
 import useFieldNames from './useFieldNames';
 import JSONLDCompacter from './JSONLDCompacter';
 import JSONLDString from './JSONLDString';
+import JSONLDObject from './JSONLDObject';
 
 export default {
     flattenPatch,
@@ -28,6 +29,7 @@ export default {
     useFieldNames,
     JSONLDCompacter,
     JSONLDString,
+    JSONLDObject,
     // aliases
     fixFlatten: flattenPatch.flattenPatch,
 };

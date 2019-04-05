@@ -69,6 +69,7 @@ describe('conversion to extended JSON-LD', () => {
                         '@id':
                             'https://api.istex.fr/document/9AA9EE9B75A6067C28F8119813504932FFD3D5A1/fulltext/pdf',
                     },
+                    uri: 'http://localhost:3000/ark:/67375/RZL-F4841DSB-1',
                 },
             ],
         };

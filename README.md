@@ -31,10 +31,9 @@ process.stdin
     -   [Examples](#examples)
 -   [flattenPatch](#flattenpatch)
 -   [getLastCharacteristic](#getlastcharacteristic)
-    -   [Parameters](#parameters-3)
     -   [Examples](#examples-1)
 -   [keyMapping](#keymapping)
-    -   [Parameters](#parameters-4)
+    -   [Parameters](#parameters-3)
     -   [Examples](#examples-2)
 -   [objects2columns](#objects2columns)
 
@@ -100,11 +99,6 @@ Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 Get last characteristic (list of all dataset covering fields).
 
-### Parameters
-
--   `chunk`  
--   `feed`  
-
 ### Examples
 
 Input:
@@ -149,14 +143,16 @@ Output:
 }
 ```
 
+Returns **any** 
+
 ## keyMapping
 
 Take an object and map its keys to the one in mapping parameter.
 
 ### Parameters
 
--   `data`  
--   `feed`  
+-   `from` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** keys of the input
+-   `to` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** matching keys for the output
 
 ### Examples
 
@@ -190,6 +186,8 @@ Output
   "Description": "Value 2"
 }]
 ```
+
+Returns **any** Same object with modified keys
 
 ## objects2columns
 

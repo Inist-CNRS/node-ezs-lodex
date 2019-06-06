@@ -21,6 +21,11 @@ import zipObject from 'lodash.zipobject';
  *   "Title": "Value",
  *   "Description": "Value 2"
  * }]
+ *
+ * @param {Array<string>}   from    keys of the input
+ * @param {Array<string>}   to  matching keys for the output
+ * @returns Same object with modified keys
+ * @name keyMapping
  * @export
  */
 export default function keyMapping(data, feed) {

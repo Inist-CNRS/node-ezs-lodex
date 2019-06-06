@@ -33,6 +33,9 @@ process.stdin
 -   [getLastCharacteristic](#getlastcharacteristic)
     -   [Parameters](#parameters-3)
     -   [Examples](#examples-1)
+-   [keyMapping](#keymapping)
+    -   [Parameters](#parameters-4)
+    -   [Examples](#examples-2)
 -   [objects2columns](#objects2columns)
 
 ## convertJsonLdToNQuads
@@ -99,7 +102,7 @@ Get last characteristic (list of all dataset covering fields).
 
 ### Parameters
 
--   `data`  
+-   `chunk`  
 -   `feed`  
 
 ### Examples
@@ -144,6 +147,48 @@ Output:
   "_id" : ObjectId("5cee530e3e9676001909ba24"),
   "publicationDate" : ISODate("2019-05-29T09:38:22.569Z")
 }
+```
+
+## keyMapping
+
+Take an object and map its keys to the one in mapping parameter.
+
+### Parameters
+
+-   `data`  
+-   `feed`  
+
+### Examples
+
+Input:
+
+
+```javascript
+[{
+  "dFgH": "Value",
+  "AaAa": "Value 2"
+}]
+```
+
+EZS:
+
+
+```javascript
+[keyMapping]
+from = dFgH
+to = Title
+from = AaAa
+to = Description
+```
+
+Output
+
+
+```javascript
+[{
+  "Title": "Value",
+  "Description": "Value 2"
+}]
 ```
 
 ## objects2columns

@@ -147,7 +147,8 @@ Returns **any**
 
 ## keyMapping
 
-Take an object and map its keys to the one in mapping parameter.
+Take an object and map its keys to the one in mapping parameters.
+Keep keys absent in `from` parameter.
 
 ### Parameters
 

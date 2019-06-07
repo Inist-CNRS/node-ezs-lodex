@@ -1,7 +1,8 @@
 import zipObject from 'lodash.zipobject';
 
 /**
- * Take an object and map its keys to the one in mapping parameter.
+ * Take an object and map its keys to the one in mapping parameters.
+ * Keep keys absent in `from` parameter.
  *
  * @example <caption>Input:</caption>
  * [{
@@ -40,7 +41,10 @@ export default function keyMapping(data, feed) {
     }
     const res = Object
         .keys(data)
-        .reduce((o, key) => ({ ...o, [mapping[key]]: data[key] }), {});
+        .reduce((o, key) => ({
+            ...o,
+            [mapping[key] ? mapping[key] : key]: data[key],
+        }), {});
     feed.write(res);
     return feed.end();
 }

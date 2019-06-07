@@ -60,4 +60,31 @@ describe('keyMapping', () => {
             })
             .on('error', done);
     });
+
+    it('should keep unmapped keys', (done) => {
+        const res = [];
+        from([{
+            dFgH: 'value',
+            AaAa: 'value 2',
+        }])
+            .pipe(
+                ezs('delegate', {
+                    script: `[keyMapping]
+                from = dFgH
+                to = Title
+                `,
+                }),
+            )
+            .on('data', (data) => {
+                res.push(data);
+            })
+            .on('end', () => {
+                expect(res).toEqual([{
+                    Title: 'value',
+                    AaAa: 'value 2',
+                }]);
+                done();
+            })
+            .on('error', done);
+    });
 });

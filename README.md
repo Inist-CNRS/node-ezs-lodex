@@ -1,5 +1,9 @@
 # A collection of `ezs` functions for Lodex.
 
+> **Warning**: the package has been renamed to [@ezs/lodex](https://github.com/Inist-CNRS/ezs/tree/master/packages/lodex#readme).
+>
+> It will no more be maintained here, but in the [Inist-CNRS/ezs](https://github/Inist-CNRS/ezs/tree/master/packages/lodex) repository.
+
 This package cannot be used alone. [ezs](https://www.npmjs.com/package/ezs) has to be installed
 
 ## Usage
